@@ -1,0 +1,158 @@
+@import url('https://fonts.gooleapis.com/css2?family=Nunito&display=swap');
+ 
+
+   *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+    justify-items: center;
+    align-items: center;
+}
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 500px;
+    height: 400px;
+    margin: 100px auto;
+    background: rgba(255, 255, 255, 0.164);
+    overflow: hidden; /* Prevents content from going outside */
+    backdrop-filter: blur(10px);
+}
+
+.container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.164);
+}
+
+.player-0 {
+    position: absolute;
+    top: 0;  /* Stays at the top */
+    left: 0; /* Aligns to the left half */
+    width: 50%;  /* Takes up the left half */
+    height: auto; 
+    text-align: center; /* Center text if needed */
+    /* background: rgba(255, 255, 255, 0.3); Just for visibility */
+    padding: 50px;
+}
+
+.player-1 {
+    position: absolute;
+    top: 0; /* Moves it to the top */
+    right: 0; /* Places it inside the right half */
+    width: 50%;  /* Ensures it fits within the 2nd half */
+    height: auto; /* Adjust based on content */
+    text-align: center; /* Center text if needed */
+    /* background: rgba(0, 0, 0, 0.1); Just for visibility */
+    padding: 50px;
+    z-index: 1;
+}
+
+h2{
+    color: #333333;
+    font-size: 25px;
+}
+.score{
+    padding: 20px;
+    font-size: 40px;
+    color: rgb(155, 55, 72);
+}
+.current{
+    background-color: rgb(155, 55, 72);
+    padding: 10px; 
+    margin-top: 100px;
+    border-radius: 5px;
+    font-size: 10px;
+    color: #fff;
+    width: 100px;
+    justify-self: center;
+}
+.current-score{
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+.middle-section{
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    position: relative; /* Allows movement */
+    transform: translateY(-80px);
+}
+
+.btn{
+    color: #333333;
+    background-color: #F8F8F8;
+    padding: 3px;
+    border-radius: 10px;
+    font-size: 12px;
+    text-align: center;
+    border-style: none;
+    cursor: pointer;
+}
+.btn:hover{
+background-color: #E6CFE6;
+}
+.btn-new-new{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.dice{
+    position: absolute;
+    box-shadow: 0 2rem 5rem rgba(0,0, 0, 0.2);
+align-self: center;
+margin-top: 100px;
+transform: translateX(-50%);
+left: 50%;
+
+}
+#roll{
+  margin-top: 112px;
+  margin-bottom: 5px;
+}
+#hold{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 70px;
+    align-self: center;
+}
+
+.player-active {
+    background-color: rgba(245, 245, 245, 0.514);
+     font-weight: bold;
+     height: 100%;
+ }
+
+.player-winner{
+    background-color: #2f2f2f;
+    height: 100%;
+}
+
+ .player-winner .name{
+     font-weight: 700;
+     color: #c7365f;
+ }
+ 
+.hidden{
+    display: none;
+}
+
+
+
