@@ -8,17 +8,21 @@
 }
 body{
     font-family: 'Nunito', sans-serif;
-    display: flex;
-    flex-direction: column;
     background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
-    justify-items: center;
-    align-items: center;
+    /* align-items: center; */
     overflow-x: hidden;
+
+    display: grid;
+    place-items: center; /* Centers both horizontally & vertically */
+    height: 100vh;
+    margin: 0;
+  
 }
 .container {
     position: relative;
     display: flex;
     flex-direction: column;
+    align-self: center;
     justify-content: space-between;
     align-items: center;
     width: 50%;
@@ -159,7 +163,7 @@ left: 50%;
 @media (max-width: 768px) {
     .container {
         width: 80%;
-        height: 400px;
+        height: 50%;
         margin: 80px auto;
     }
 
