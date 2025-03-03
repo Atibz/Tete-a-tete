@@ -13,6 +13,7 @@ body{
     background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
     justify-items: center;
     align-items: center;
+    overflow-x: hidden;
 }
 .container {
     position: relative;
@@ -20,7 +21,9 @@ body{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 500px;
+    width: 50%;
+    max-width: 100%;
+  /* width: auto; */
     height: 400px;
     margin: 100px auto;
     background: rgba(255, 255, 255, 0.164);
